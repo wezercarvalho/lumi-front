@@ -1,0 +1,46 @@
+## Instalação
+Versão do node utilizada 18.16.0
+
+npm install
+yarn
+
+## Configuração requests - axios
+Verifique a porta e rota configurada na api do back
+Em src/services/axios.ts configure a variável baseUrlConfig
+
+## Executar a aplicação
+npm run dev
+yarn dev
+
+## Estrutura de Diretórios
+A seguir, a estrutura de diretórios do projeto:
+├── src/                        // Código-fonte do projeto
+│   ├── app/                    // Componentes principais da aplicação
+│   │   ├── App.tsx             // Componente principal da aplicação
+│   │   └── main.tsx            // Arquivo de inicialização da aplicação
+│   ├── components/             // Componentes reutilizáveis
+│   ├── images/                 // Imagens usadas no projeto
+│   ├── modules/                // Módulos da aplicação
+│   │   ├── module1/            // Módulo 1
+│   │   │   ├── interfaces/     // Interfaces do módulo 1
+│   │   │   ├── pages/          // Páginas do módulo 1
+│   │   │   ├── routes/         // Rotas do módulo 1
+│   │   │   ├── services/       // Serviços do módulo 1
+│   │   │   ├── store/          // Armazenamento de dados do módulo 1
+│   │   │   └── utils/          // Utilitários do módulo 1
+│   ├── services/               // Serviços da aplicação
+│   ├── utils/                  // Utilitários da aplicação
+│   │   ├── Colors/             // Cores padrões
+│   │   ├── DatagridStore/      // Store base para gerenciamento de datagrid
+│   │   ├── Interfaces/         // Interfaces padrões
+│   │   ├── RouterProvider/     // Configurações para gerenciar rotas
+│   │   └── Theme/              // Configuração de tema base
+│   └── index.html              // Arquivo HTML principal
+├── .eslintrc                   // Configurações do ESLint
+├── .gitignore                  // Arquivos e diretórios ignorados pelo Git
+├── .prettierrc                 // Configurações do Prettier
+├── package.json                // Dependências e scripts do projeto
+├── README.md                   // Arquivo de documentação
+├── tsconfig.json               // Configurações do TypeScript
+├── vite-env.d.ts               // Tipos do Vite
+└── vite.config.ts              // Configurações do Vite

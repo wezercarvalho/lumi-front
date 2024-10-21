@@ -1,0 +1,81 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "eslint-config-prettier"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {},
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-console": "error",
+        "prefer-const": "error",
+        "no-var": "error",
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "builtin",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@mui/material/**",
+                        "group": "external",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@components/**",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@images/**",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@modules/**",
+                        "group": "internal"
+                    },
+                    {
+                        "pattern": "@utils/**",
+                        "group": "internal"
+                    },
+                    {
+                        "pattern": "./*",
+                        "group": "sibling",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "./*.styled",
+                        "group": "index",
+                        "position": "after"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["builtin"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}
